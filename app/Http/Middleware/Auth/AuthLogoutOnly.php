@@ -16,7 +16,7 @@ class AuthLogoutOnly
     public function handle($request, Closure $next)
     {
         if ($request->session()->has('user') && $request->session()->get('user')['id']){
-            return redirect(config('redirects.redirectIfAuth'));
+            return redirect(config('redirects.redirectIfAuthAdmin'));
         }
         return $next($request);
     }

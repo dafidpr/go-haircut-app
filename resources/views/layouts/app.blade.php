@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0BAF7B">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
     <!-- ========================= CSS here ========================= -->
@@ -19,7 +20,15 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/material-date-range-picker/dist/duDatepicker.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/material-date-range-picker/dist/duDatepicker-theme.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/autocomplete/jquery.autocomplete.css') }}">
+    <link href="{{ asset('admin/assets/plugins/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css">
     @yield('css')
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/plugins/datatables/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/plugins/datatables/buttons.bootstrap4.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/plugins/datatables/responsive.bootstrap4.min.css') }}">
+    <script>
+        var url = '{{ url("") }}';
+    </script>
 </head>
 
 <body>
@@ -40,6 +49,7 @@
     <script src="{{ asset('assets/vendors/material-date-range-picker/dist/duDatepicker.min.js') }}"></script>
     <script src="{{ asset('assets/vendors/feather-icons/dist/feather.js') }}"></script>
     <script src="{{ asset('assets/vendors/autocomplete/jquery.autocomplete.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
     @yield('js')
     <script>
         $(document).ready(function() {
@@ -56,6 +66,16 @@
             var switchery = new Switchery(html, { color: '#0BAF7B', jackColor: '#fff' });
         });
     </script>
+    <script src="{{ asset('admin/assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/datatables/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/datatables/responsive.bootstrap4.min.js') }}"></script>
+
+    @if(isset($mod))
+    <!--Script Custom-->
+    <script src="{{ asset('mod/' . $mod . '.js') }}"></script>
+    @endif
+    <script src="{{ asset('admin/mod/mod-main.js') }}"></script>
 </body>
 
 </html>

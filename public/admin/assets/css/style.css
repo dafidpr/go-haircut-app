@@ -1,0 +1,76 @@
+/* .img-profil .img-btn {
+	position: absolute;
+	margin-top: 130px;
+	margin-left: -54px;
+	font-size: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right:10px;
+    padding-left: 10px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+}
+
+.img-btn.right {
+	margin-top: 130px;
+	margin-left: -50px;
+}
+
+.img-btn.left {
+	margin-top: 130px;
+	margin-left: -170px;
+} */
+
+
+
+.main-content .item-img-profile .embed-responsive:hover .cover {
+    transition: all 0.8s;
+    opacity: 1;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+ .main-content .item-img-profile .cover {
+    transition: all 0.8s;
+    width: 174px;
+    height: 174px;
+    z-index: 0;
+    opacity: 0;
+    top: 1px;
+    left: 29px;
+    background: rgba(34, 30, 66, 0.8);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+  
+ .main-content .item-img-profile .cover .trigger {
+    transition: all 0.8s;
+    width: 60px;
+    height: 60px;
+    background: #5E6EFE;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 11px 28px 0px rgba(94, 110, 254, 0.33);
+  }
+  
+ .main-content .item-img-profile .cover .trigger:hover {
+    transition: all 0.8s;
+    background: #221E42;
+    box-shadow: 0px 11px 28px 0px rgba(94, 110, 254, 0);
+    cursor: pointer;
+  }
+  
+ .main-content .item-img-profile .cover .trigger i {
+    width: 26px;
+    height: 26px;
+    font-size: 26px;
+    color: white;
+  }

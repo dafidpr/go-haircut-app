@@ -4,7 +4,17 @@
 
     @include('admin.layouts.partials.topbar')
     @include('admin.layouts.partials.sidebar')
-    @yield('content')
+    <main role="main" class="main-content">
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+              <div class="col-12">
+                @yield('content')
+              </div> <!-- .col-12 -->
+          </div> <!-- .row -->
+      </div> <!-- .container-fluid -->
+      @include('admin.layouts.notification')
+  </main>
+
     
 @endsection
 
@@ -16,14 +26,24 @@
 <script src="{{ asset('admin/assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('admin/assets/js/simplebar.min.js') }}"></script>
 <script src='{{ asset('admin/assets/js/daterangepicker.js') }}'></script>
+<script src='{{ asset('admin/assets/js/jquery.timepicker.js') }}'></script>
 <script src='{{ asset('admin/assets/js/jquery.stickOnScroll.js') }}'></script>
 <script src="{{ asset('admin/assets/js/tinycolor-min.js') }}"></script>
 <script src="{{ asset('admin/assets/js/config.js') }}"></script>
 <script src="{{ asset('admin/assets/js/apps.js') }}"></script>
+<script src="{{ asset('admin/assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
 <!-- End JS -->
 <script>
+  $(document).ready(function(){
+
+    $('.time-input').timepicker(
+      {
+          'scrollDefault': 'now',
+          'zindex': '9999' /* fix modal open */
+      });
+  })
     window.dataLayer = window.dataLayer || [];
 
     function gtag()

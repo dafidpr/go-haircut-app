@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Middleware\Role;
+namespace App\Http\Middleware\Auth;
 
 use Closure;
 
-class AccessValidator
+class AuthLogoutMember
 {
     /**
      * Handle an incoming request.
@@ -15,6 +15,9 @@ class AccessValidator
      */
     public function handle($request, Closure $next)
     {
+        if ($request->session()->has('customer') && $request->session()->get('customer')['id'] ){
+            return redirect(config('redirects.redirectIfUnAuthArea'));
+        }
         return $next($request);
     }
 }

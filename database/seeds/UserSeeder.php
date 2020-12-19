@@ -16,19 +16,15 @@ class UserSeeder extends Seeder
     {
         User::insert([
             [
-                'full_name' => 'Suzu Aoba',
-                'email' => 'suzuao@gmail.com',
+                'full_name' => 'Dafid Prasetyo',
+                'email' => 'dafid@gmail.com',
                 'password' => Hash::make(1234),
-                'phone_number' => '12345678',
-                'role_id' => '1',
                 'created_at' => Carbon::now(),
             ],
             [
-                'full_name' => 'Aoi Sora',
-                'email' => 'aoifutaba@icloud.com',
+                'full_name' => 'Taufik Hidayat',
+                'email' => 'taufik@gmail.com',
                 'password' => Hash::make(1234),
-                'phone_number' => '12345678',
-                'role_id' => '2',
                 'created_at' => Carbon::now(),
             ],
         ]);

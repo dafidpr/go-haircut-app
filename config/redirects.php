@@ -1,6 +1,9 @@
 <?php
 
 return [    
-    'redirectIfAuth' => '/administrator',
-    'redirectIfUnAuth' => '/auth/login'
+    'redirectIfAuthAdmin' => '/administrator',
+    'redirectIfUnAuthAdmin' => '/auth/login',
+    'redirectIfUnAuthArea' => '/member/login',
+    'redirectIfAuthCustomer' => '/',
+    'redirectIfAuthBarber' => '/barber',
 ];

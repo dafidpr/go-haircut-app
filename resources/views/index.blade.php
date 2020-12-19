@@ -7,7 +7,7 @@
                 <h1 class="font-weight-bold">#Ganteng <br> Maksimal</h1>
                 <p class="text-muted mt-3">Temukan berbagai barber profesional yang siap mengubah gayamu menjadi lebih keren dan tentunya  <strong>#GantengMaksimal</strong></p>
                 <a href="/explore" class="btn color-theme pr-4 pl-4 pt-2 pb-2 text-white mt-3">Explore Now</a>
-                <a href="/register-member" class="btn  btn-outline-theme  pr-4 pl-4 pt-2 pb-2 text-theme mt-3">Become a member</a>
+                <a href="/member/register-member" class="btn  btn-outline-theme  pr-4 pl-4 pt-2 pb-2 text-theme mt-3">Become a member</a>
             </div>
             <div class="col-md-7">
                 <img src="{{ asset('assets/img/ilustration/barber.svg') }}" width="650" alt="">

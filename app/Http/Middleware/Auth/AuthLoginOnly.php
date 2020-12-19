@@ -19,6 +19,6 @@ class AuthLoginOnly
             return $next($request);
         }
 
-        return redirect(config('redirects.redirectIfUnAuth'));
+        return redirect(config('redirects.redirectIfUnAuthAdmin'));
     }
 }

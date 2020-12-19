@@ -29,6 +29,7 @@
 <script src='{{ asset('admin/assets/js/jquery.timepicker.js') }}'></script>
 <script src='{{ asset('admin/assets/js/jquery.stickOnScroll.js') }}'></script>
 <script src="{{ asset('admin/assets/js/tinycolor-min.js') }}"></script>
+<script src="{{ asset('admin/assets/js/select2.min.js') }}"></script>
 <script src="{{ asset('admin/assets/js/config.js') }}"></script>
 <script src="{{ asset('admin/assets/js/apps.js') }}"></script>
 <script src="{{ asset('admin/assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
@@ -37,7 +38,9 @@
 <!-- End JS -->
 <script>
   $(document).ready(function(){
-
+    $('.select2').select2({
+        theme: 'bootstrap4',
+    });
     $('.time-input').timepicker(
       {
           'scrollDefault': 'now',

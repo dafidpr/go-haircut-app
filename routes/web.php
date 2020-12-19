@@ -23,7 +23,14 @@ Route::get('/success', function(){
 Route::prefix('administrator')->middleware('auth.login_only')->group(function () {
 
     Route::get('', 'Admin\DashboardController@index');
-
+    Route::get('/edit_profile', 'Admin\ProfileController@edit_profile');
+    Route::patch('/edit_profile/{id}', 'Admin\ProfileController@update_profile');
+    Route::get('/update_password', 'Admin\ProfileController@update_password');
+    Route::patch('/update_password/{id}', 'Admin\ProfileController@change_password');
+    
+    Route::get('/settings', 'Admin\SettingController@index');
+    Route::get('/settings/{id}/edit', 'Admin\SettingController@edit');
+    Route::patch('/settings/edit/{id}', 'Admin\SettingController@update');
     // Route Page
     // Route::get('/page', 'Admin\PageController@index');
     // Route::get('/page/getContent', 'Admin\PageController@getContent');

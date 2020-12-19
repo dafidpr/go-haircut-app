@@ -74,11 +74,6 @@
                 </div>
                 <h4 class="mt-2">Jam Operasional</h4>
                 @php
-                    function multiexplode ($delimiters,$data) {
-                        $MakeReady = str_replace($delimiters, $delimiters[0], $data);
-                        $Return    = explode($delimiters[0], $MakeReady);
-                        return  $Return;
-                    }
                     $split = multiexplode(array('-',','), $barber->opening_hours)
                 @endphp
                 <div class="form-row">

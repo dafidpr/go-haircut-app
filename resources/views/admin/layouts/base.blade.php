@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/daterangepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/css/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/select2.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/css/app-light.css') }}" id="lightTheme">
     <link rel="stylesheet" href="{{ asset('admin/assets/css/app-dark.css') }}" id="darkTheme" disabled>
     <link href="{{ asset('admin/assets/plugins/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css">
